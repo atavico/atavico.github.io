@@ -25,11 +25,13 @@ const Home = () => {
       duration: 0.7,
     });
 
-    gsap.to(split3.chars, {
-      y: 0,
-      stagger: 0.05,
-      delay: 3, // Delay to start after the second h1 animation
-      duration: 0.7,
+    gsap.fromTo(split3.chars, 
+      { opacity: 0, y: 0 },
+      {
+        opacity: 1,
+        stagger: 0.05,
+        delay: 3.5, // Delay to start after the second h1 animation
+        duration: 0.05,
     });
 
     gsap.fromTo(split4.chars,
