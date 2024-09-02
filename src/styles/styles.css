@@ -1,0 +1,111 @@
+body {
+  font-family: 'Futura', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Futura', sans-serif;
+  font-weight: lighter;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.menu-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.menu-icon .line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-icon .line1 {
+  transform: translateY(-6px);
+}
+
+.menu-icon .line2 {
+  transform: translateY(6px);
+}
+
+.menu-icon.open .line1 {
+  transform: rotate(45deg) translateY(0);
+}
+
+.menu-icon.open .line2 {
+  transform: rotate(-45deg) translateY(0);
+}
+
+.fixed-navbar {
+  z-index: 50; /* Assicurati che la navbar sia sopra tutto */
+}
+
+.text-white {
+  color: white;
+}
+
+h1 {
+  font-size: 7rem;
+  /* text-transform: uppercase; */
+  font-family: 'Futura', sans-serif;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  line-height: 5.9rem;
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* @keyframes blink {
+  from { border-right-color: rgba(0, 0, 0, 0.75); }
+  to { border-right-color: transparent; }
+} */
+
+.typewriter h2 {
+  overflow: hidden;
+  border-right: 0.15em solid rgba(0, 0, 0, 0.75); 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.15em; 
+  animation: 
+    typewriter 4s steps(40, end) 1s 1 normal both,
+    /* blink-caret 0.75s step-end infinite; */
+}
+
+/* @keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+} */
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Futura', sans-serif;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  line-height: 3rem;
+}
+
+
+.char {
+  transform: translateY(135px);
+  transition: transform 0.3s;
+}
