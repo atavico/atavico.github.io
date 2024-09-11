@@ -46,28 +46,28 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className="bg-custom-blue min-h-screen p-4 text-white relative overflow-hidden">
       <Head>
         <title>Alessandro Tarsi - Portfolio</title>
         <meta name="description" content="Portfolio di Alessandro Tarsi, Designer e Developer." />
         <meta name="keywords" content="Alessandro Tarsi, Portfolio, Designer, Developer" />
         <meta name="author" content="Alessandro Tarsi" />
       </Head>
-      <div className="min-h-screen p-4 text-black relative overflow-hidden">
+      <div className="min-h-screen p-4 text-white relative overflow-hidden">
         <Navbar />
-        <main className="container mx-auto flex flex-col min-h-screen">
-        <div className="text-left md:mb-64 mt-32 px-4" style={{ maxWidth: "1200px", padding: "0 0"}}>
-          <h1 id="heading1" className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">Hey there.</h1>
-          <h1 id="heading2" className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">I&apos;m Alessandro Tarsi.</h1>
-          <h2 id="description" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 ml-2" style={{ lineHeight: '3rem' }}>Designer & Developer</h2>
-        </div>
-        <div className="text-right mt-16 px-4" style={{ maxWidth: "1200px", padding: "0 0"}}>
-          <a id="description2" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 ml-2" style={{ lineHeight: '3rem' }}>
-            I was born in the &quot;Brands&quot;, in 1997. <br />
-            I am a designer and developer, <br />
-            I love to create and design new things.
-          </a>
-        </div>
+        <main className="container mx-auto flex flex-col min-h-screen" style={{ maxWidth: "1500px" }}>
+          <div className="text-left md:mb-64 mt-32 px-4" style={{ maxWidth: "1500px", padding: "0 0"}}>
+            <h1 id="heading1" className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">Hey there.</h1>
+            <h1 id="heading2" className="text-3xl sm:text-3xl md:text-5xl lg:text-6xl font-bold">I&apos;m Alessandro Tarsi.</h1>
+            <h2 id="description" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-4 ml-2" style={{ lineHeight: '3rem' }}>Designer & Developer</h2>
+          </div>
+          <div className="text-right mt-32 px-4" style={{ maxWidth: "1500px", padding: "0 0"}}>
+            <a id="description2" className="sm:text-xl md:text-1xl lg:text-2xl font-bold mt-4 ml-2" style={{ lineHeight: '3rem' }}>
+              I was born in the &quot;Brands&quot;, in 1997. <br />
+              I have a Bachelor's degree in Product Design <br />
+              and i am a member of 42 Coding School Network.
+            </a>
+          </div>
           {/* <div className="p-4 bg-white">
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold">Last projects</h1>
@@ -86,7 +86,7 @@ const Home = () => {
           </div> */}
         </main>
       </div>
-    </>
+    </div>
   );
 };
 

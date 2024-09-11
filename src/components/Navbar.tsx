@@ -2,25 +2,25 @@ import Link from 'next/link';
 import { useState } from 'react';
 import MenuIcon from './MenuIcon';
 
-const Navbar = () => {
+const Navbar = ({ textColor = 'text-white '}: {textColor?: string}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="p-4 rounded-lg mb-4 fixed top-0 left-0 right-0 z-50">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center" style={{ maxWidth: "1500px" }}>
         <Link href="/" legacyBehavior>
-          <a className={`text-xl font-bold ${isOpen ? 'text-white' : 'text-black'} z-50`}>Portfolio</a>
+          <a className={`text-xl font-bold ${isOpen ? 'text-white' : textColor} z-50`}>Portfolio</a>
         </Link>
         <div className="hidden lg:flex space-x-4">
           <Link href="/" legacyBehavior>
-            <a className="text-gray-700 hover:text-gray-900">About</a>
+            <a className={` ${textColor} hover:text-yellow`}>About</a>
           </Link>
           <Link href="/projects" legacyBehavior>
-            <a className="text-gray-700 hover:text-gray-900">Projects</a>
+            <a className={` ${textColor} hover:text-yellow`}>Projects</a>
           </Link>
-          {/* <Link href="/contact" legacyBehavior>
-            <a className="text-gray-700 hover:text-gray-900">Contact</a>
-          </Link> */}
+          <Link href="/contact" legacyBehavior>
+            <a className={` ${textColor} hover:text-yellow`}>Contact</a>
+          </Link>
         </div>
         <div className="block lg:hidden z-50">
           <button

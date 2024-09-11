@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,7 +14,17 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "custom-blue": "#1f3a93",
+        "custom-grey": "#f5f5f5",
+        yellow: '#FFC107',
+      },
     },
+  },
+  variants: {
+    extends: {
+      textColor: ['hover'],
+    }
   },
   plugins: [],
 };

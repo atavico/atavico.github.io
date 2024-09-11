@@ -59,9 +59,37 @@ a {
   z-index: 50; /* Assicurati che la navbar sia sopra tutto */
 }
 
+/* Color Palette */
+
 .text-white {
   color: white;
 }
+
+.text-orange {
+  color: #F4A261
+}
+
+.text-blue {
+  color: #004170;
+}
+
+.bg-custom-blue {
+  background-color: #0077B6;
+}
+
+.bg-custom-grey {
+  background-color: #191919;
+}
+
+.bg-custom-yellow {
+  background-color: #FFC107;
+}
+
+.bg-eventify-blue {
+  background-color: #004170;
+}
+
+/* Typography */
 
 h1 {
   font-size: 7rem;
@@ -108,4 +136,51 @@ h2 {
 .char {
   transform: translateY(135px);
   transition: transform 0.3s;
+}
+
+.h-25vh {
+  height: 45vh;
+  background-color: antiquewhite;
+}
+
+/* Contenitore del carosello */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap; /* Impedisce che il testo vada a capo */
+}
+
+/* Animazione per lo scorrimento continuo */
+.carousel-track {
+  display: flex;
+  animation: scroll-left 80s linear infinite;
+}
+
+/* Singoli elementi del carosello */
+.carousel-item {
+  display: inline-block;
+  border: 2px solid white; /* Solo bordo */
+  border-radius: 3rem; /* Angoli arrotondati */
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  color: white;
+}
+
+/* Animazione per far scorrere gli elementi da destra a sinistra */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Duplicazione degli elementi per effetto di continuità */
+.carousel-track::before {
+  content: attr(data-text);
+  display: inline-block;
+  white-space: nowrap;
 }
