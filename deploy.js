@@ -1,9 +1,16 @@
 const { execSync } = require('child_process');
 const ghpages = require('gh-pages');
 const path = require('path');
+const fs = require('fs');
 
 // Esegui la build e l'export del progetto
 execSync('npm run build', { stdio: 'inherit' });
+
+// Crea il file .nojekyll nella cartella out se non esiste
+const nojekyllPath = path.join(__dirname, 'out', '.nojekyll');
+if (!fs.existsSync(nojekyllPath)) {
+  fs.writeFileSync(nojekyllPath, '');
+}
 
 // Pubblica la cartella /out nel branch gh-pages
 ghpages.publish(path.join(__dirname, 'out'), {
