@@ -160,9 +160,9 @@ h2 {
   display: inline-block;
   border: 2px solid white; /* Solo bordo */
   border-radius: 3rem; /* Angoli arrotondati */
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   margin: 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   white-space: nowrap;
   color: white;
 }
