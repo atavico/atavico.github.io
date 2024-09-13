@@ -25,7 +25,7 @@ const Navbar = ({ textColor = 'text-white '}: {textColor?: string}) => {
         <div className="block lg:hidden z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`focus:outline-none ${isOpen ? 'text-white' : 'text-gray-700 hover:text-gray-900'}`}
+            className={`focus:outline-none ${isOpen ? 'text-white' : 'text-white'}`}
           >
             <MenuIcon isOpen={isOpen} />
           </button>

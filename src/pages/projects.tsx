@@ -1,35 +1,36 @@
 import Navbar from '../components/Navbar';
-import { useState } from 'react';
+import ProjectCard from '../components/projCard';import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import PongComponent from '../components/Trasc/pong';
 
-const ProjectCard = ({ title, details, imageUrl, projectUrl }: { title: string, details: string, imageUrl: string, projectUrl: string }) => {
-  const [isHovered, setIsHovered] = useState(false);
+// const ProjectCard = ({ title, details, imageUrl, projectUrl }: { title: string, details: string, imageUrl: string, projectUrl: string }) => {
+//   const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <Link href={projectUrl}>
-      <div
-        className="project-card relative rounded-lg overflow-hidden h-full flex flex-col"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <Image
-          src={imageUrl}
-          alt={title}
-          className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'glitch' : ''}`}
-          width={500}
-          height={500}
-        />
-        <div className={`absolute inset-0 p-4 flex items-center justify-center transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="text-center">
-            <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-lg">{details}</p>
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-};
+//   return (
+//     <Link href={projectUrl}>
+//       <div
+//         className="project-card relative rounded-lg overflow-hidden h-full flex flex-col"
+//         onMouseEnter={() => setIsHovered(true)}
+//         onMouseLeave={() => setIsHovered(false)}
+//       >
+//         <Image
+//           src={imageUrl}
+//           alt={title}
+//           className={`w-full h-full object-cover transition-transform duration-500 ${isHovered ? 'glitch' : ''}`}
+//           width={500}
+//           height={500}
+//         />
+//         <div className={`absolute inset-0 p-4 flex items-center justify-center transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+//           <div className="text-center">
+//             <h1 className="text-2xl font-bold">{title}</h1>
+//             <p className="text-lg">{details}</p>
+//           </div>
+//         </div>
+//       </div>
+//     </Link>
+//   );
+// };
 
 const Projects = () => {
   return (
@@ -39,22 +40,24 @@ const Projects = () => {
         <h1 className="text-4xl font-bold mt-20 mb-8">Last projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Primo progetto */}
-          <div className="md:col-span-2 h-25vh rounded-lg bg-custom-yellow">
+          <div className="md:col-span-2 h-25vh rounded-lg">
             <ProjectCard 
-              title="Eventify - Event Management Platform" 
+              title="Trascendence - Game Platform"
               details="42 Roma Luiss X Leonardo S.P.A. - Progetto di stage" 
               imageUrl="/images/Component.png"  
-              projectUrl='/projects/eventify'
+              projectUrl='/'
+              bgColor='#004170'
             />
           </div>
           
           {/* Secondo progetto */}
-          <div className="h-25vh rounded-lg bg-custom-yellow">
+          <div className="h-25vh rounded-lg">
             <ProjectCard
-              title="Trascendence - Game Platform" 
+              title="Eventify - Event Management Platform"
               details="Specifiche del progetto 2" 
-              imageUrl="/path/to/image2.jpg" 
-              projectUrl='/' 
+              imageUrl="/images/Component.png" 
+              projectUrl='/projects/eventify'
+              bgColor='#FFC107'
             />
           </div>
           

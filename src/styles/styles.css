@@ -140,7 +140,6 @@ h2 {
 
 .h-25vh {
   height: 45vh;
-  background-color: antiquewhite;
 }
 
 /* Contenitore del carosello */
@@ -183,4 +182,40 @@ h2 {
   content: attr(data-text);
   display: inline-block;
   white-space: nowrap;
+}
+
+/* projectCard */
+
+.glitch {
+  opacity: 0.5;
+  filter: brightness(0.2);
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.01);
+}
+
+.project-card .glitch {
+  opacity: 0.5;
+  filter: brightness(0.3); /* Riduce ulteriormente la luminosità per scurire di più */
+}
+
+.project-card .text-container {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+}
+
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
 }
